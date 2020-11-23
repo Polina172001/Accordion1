@@ -1,10 +1,11 @@
-const accordion__btn = Array.from(document.querySelectorAll('.accordion__btn'));
+const hamb = document.querySelector('.hamb');
+const closeMenu = document.querySelector('.close');
+const header = document.querySelector('header');
 
-console.log(accordion__btn);
+hamb.addEventListener('click', function () {
+  header.classList.add ('open');
+})
 
-accordion__btn.forEach( (item) => {
-  item.addEventListener('click', function() {
-    this.closest('.accordion__item').classList.toggle('open_accordion');
-  })
-  console.log(item);
+closeMenu.addEventListener('click', function () {
+  header.classList.remove ('open');
 })
